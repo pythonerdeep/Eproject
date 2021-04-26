@@ -1,0 +1,51 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+
+    <div id="content" style="margin-right: 10%">
+
+
+        <div class="card">
+
+            <div class="card-header">
+                <h6 class="text-uppercase mb-0">OTP Verification</h6>
+            </div>
+            <div class="card-body">
+
+                {% if messages %}
+                <div class="alert alert-success">
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <li>{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                    </div>
+                    {% endif %}
+
+                <form method="post" style="margin-left: 15%;">
+                    {% csrf_token %}
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Enter Mobile No. :</label>
+                        <div class="col-sm-4">
+                            <input type="number" name="mobile" placeholder="Number" size="10">
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <button type="submit" class="btn btn-success p-6" style="margin-left: 30%">Send OTP</button>
+                </form>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+
+
+{% endblock%}

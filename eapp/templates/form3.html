@@ -1,0 +1,62 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="wrapper">
+    <!-- Sidebar  -->
+
+    {% include 'navbar.html'%}
+    <!-- Page Content  -->
+    <div id="content">
+       {% include 'top-nav2.html'%}
+
+
+        <div class="card">
+
+            <div class="card-header">
+                <h6 class="text-uppercase mb-0">Business</h6>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group row">
+                        <label class="col-sm-5 col-form-label">Type your Business Name :</label>
+                        <div class="col-sm-4">
+                            {{ form.bname }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-5 col-form-label">Business Type :</label>
+                        <div class="col-sm-4">
+                            {{ form.ctype }}
+                        </div>
+                    </div>
+
+                    <br>
+                    <div>
+                        <button type="submit" class="btn btn-danger p-6"><a href="f2">Back</a></button>
+                       <!-- <button type="submit"class="btn btn-success p-6" style="margin:0 30.7%">Submit</button>-->
+                        <button type="submit" class="btn btn-success p-6" title="your-tooltip-here" style="margin-left: 80%">Next</button>
+                    </div>
+                    {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <li>
+                            <div class="alert alert-info"> {{ message }} </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </form>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+
+
+{% endblock%}

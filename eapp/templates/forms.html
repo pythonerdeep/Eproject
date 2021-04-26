@@ -1,0 +1,67 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="wrapper">
+    <!-- Sidebar  -->
+
+    {% include 'navbar.html'%}
+    <!-- Page Content  -->
+    <div id="content">
+       {% include 'top-nav2.html'%}
+
+
+        <div class="card">
+
+            <div class="card-header">
+                <h6 class="text-uppercase mb-0">Business</h6>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Name :</label>
+                        <div class="col-sm-4">
+                            {{ form.name }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Mobile No. :</label>
+                        <div class="col-sm-4">
+                            {{ form.mobile }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Email ID :</label>
+                        <div class="col-sm-4">
+                            {{ form.email }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Password :</label>
+                        <div class="col-sm-4">
+                            {{ form.password }}
+                        </div>
+                    </div>
+
+                    <br>
+                    <!--<div style="float:left">
+                          <button type="submit" class="btn btn-success p-6">Submit</button>
+                    </div>-->
+                    <div style="float:right">
+                         <button type="submit"class="btn btn-success p-6">Next</button>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+
+
+{% endblock%}

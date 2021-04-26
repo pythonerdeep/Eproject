@@ -1,0 +1,100 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<style>
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+}
+</style>
+
+<div class="wrapper">
+    <!-- Sidebar  -->
+
+    {% include 'navbar.html'%}
+    <!-- Page Content  -->
+    <div id="content">
+       {% include 'top-nav2.html'%}
+
+
+        <div class="card">
+
+            <div class="card-header">
+                <h6 class="text-uppercase mb-0">Employee</h6>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group row">
+                        <label class="col-sm-5 col-form-label">
+                            What location you want to start?
+                        </label>
+                        <div class="col-sm-4">
+                            {{ form.location }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-5 col-form-label">
+                            Would you like to hire any employee for your business like marketing, digital marketing, sales boys, etc.?
+                        </label>
+                        <div class="col-sm-4">
+                            <button onclick="myFunction()">Yes</button>
+                        </div>
+                    </div>
+                    <div id="myDIV" style="display:none;">
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label">
+                                Which area you want to hire employees for your business?
+                            </label>
+                            <div class="col-sm-4">
+                                {{ form.area }}
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label">
+                                How many employees need for your Business?
+                            </label>
+                            <div class="col-sm-4">
+                                {{ form.eneed }}
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label">
+                                What work you want to do?
+                            </label>
+                            <div class="col-sm-4">
+                                {{ form.work }}
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <button type="submit" class="btn btn-danger p-6"><a href="f3">Back</a></button>
+<!--                        <button type="submit"class="btn btn-success p-6" style="margin:0 30%">Submit</button>-->
+                        <button type="submit" class="btn btn-success p-6" style="margin-left: 80%">Next</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+
+
+{% endblock%}

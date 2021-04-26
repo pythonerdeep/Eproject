@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="wrapper">
+    <!-- Sidebar  -->
+
+    {% include 'navbar.html'%}
+    <!-- Page Content  -->
+    <div id="content">
+       {% include 'top-nav2.html'%}
+
+
+        <div class="card">
+
+            <div class="card-header">
+                <h6 class="text-uppercase mb-0">Employee</h6>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                  <div class="form-group row">
+                        <label class="col-sm-5 col-form-label">
+                            Domain name
+                        </label>
+                        <div class="col-sm-4">
+                            {{ form.domain }}
+                        </div>
+                    </div>
+
+                    <br>
+                    <div style="float:left">
+                          <button type="submit" class="btn btn-danger p-6"><a href="f4">Back</a></button>
+                    </div>
+                    <div style="float:right">
+                         <button type="submit"class="btn btn-success p-6">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+
+
+{% endblock%}

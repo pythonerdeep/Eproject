@@ -1,0 +1,43 @@
+body{
+background:#eee;
+}
+
+
+
+.myform form{
+        width: 100%;
+    margin: auto;
+
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.myform{
+    background: #f2f2f2;
+    width: 100%;
+    float: left;
+
+}
+
+.myform label{
+display:block;
+width:100%;
+padding:10px 0px;
+
+}
+
+.myform input {
+    margin: 5px;
+    outline: none;
+
+}
+
+.sign-color{
+background:#fcfcfcfa;
+}
+
+.top-box
+{
+background: #fff;
+    padding: 10px;
+}

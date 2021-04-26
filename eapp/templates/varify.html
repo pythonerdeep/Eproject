@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+
+    <div id="content" style="margin-right: 10%">
+
+
+        <div class="card">
+
+            <div class="card-header">
+                <h6 class="text-uppercase mb-0">OTP Verification</h6>
+            </div>
+            <div class="card-body">
+                <form method="post" style="margin-left: 30%;">
+                    {% csrf_token %}
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Verify OTP :</label>
+                        <div class="col-sm-3">
+                            <input type="password" name="number" placeholder="Enter OTP" size="4">
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <button type="submit" class="btn btn-success p-6" style="margin-left: 15%">Verified</button>
+                </form>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+
+
+{% endblock%}

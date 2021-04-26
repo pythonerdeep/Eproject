@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="wrapper">
+    <!-- Sidebar  -->
+
+    {% include 'navbar.html'%}
+    <!-- Page Content  -->
+    <div id="content">
+       {% include 'top-nav2.html'%}
+
+
+        <div class="card">
+
+            <div class="card-header">
+                <h6 class="text-uppercase mb-0">Employee</h6>
+            </div>
+            <div class="card-body">
+                <center>
+                    <h3>Welcome to the our Website :)</h3><br> <br>
+                    <button type="button" style="background:blue;color:white;border-radius:10px;font-size:25px;"><a href="/f">Business Form</a></button> &nbsp &nbsp &nbsp
+                    <button type="button" style="background:red;color:white;border-radius:10px;font-size:25px"><a href="em/">Employee Form</a></button><br> <br>
+                    <button type="button" style="background:#4D4D4f;color:white;border-radius:10px;font-size:25px"><a href="/login">Login</a></button>
+                </center>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+
+
+{% endblock%}
